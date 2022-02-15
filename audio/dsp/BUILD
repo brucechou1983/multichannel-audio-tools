@@ -57,7 +57,7 @@ cc_library(
     deps = [
         ":porting",
         ":signal_vector_util",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
     ],
 )
 
@@ -80,7 +80,7 @@ cc_library(
     hdrs = ["batch_top_n.h"],
     deps = [
         ":porting",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
     ],
 )
 
@@ -88,7 +88,7 @@ cc_library(
     name = "circular_buffer",
     hdrs = ["circular_buffer.h"],
     deps = [
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
         "@com_google_absl//absl/types:span",
     ],
 )
@@ -99,7 +99,7 @@ cc_test(
     srcs = ["circular_buffer_test.cc"],
     deps = [
         ":circular_buffer",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
         "@gtest//:gtest_main",
         "@com_google_absl//absl/types:span",
     ],
@@ -133,7 +133,7 @@ cc_library(
     hdrs = ["eigen_types.h"],
     deps = [
         ":porting",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
         "@com_google_absl//absl/base:core_headers",
         "@com_google_absl//absl/meta:type_traits",
         "@com_google_absl//absl/types:span",
@@ -160,7 +160,7 @@ cc_library(
     deps = [
         ":porting",
         ":signal_vector_util",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
     ],
 )
 
@@ -210,7 +210,7 @@ cc_library(
     hdrs = ["fixed_delay_line.h"],
     deps = [
         ":porting",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
         "//third_party/eigen3",
     ],
 )
@@ -233,7 +233,7 @@ cc_library(
     hdrs = ["kiss_fft.h"],
     deps = [
         ":porting",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
         "//third_party/kissfft:kiss_fft_float",
     ],
 )
@@ -282,7 +282,7 @@ cc_library(
     deps = [
         ":porting",
         "//audio/dsp/portable:number_util",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
     ],
 )
 
@@ -420,7 +420,7 @@ cc_library(
     srcs = ["signal_generator.cc"],
     deps = [
         ":porting",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
         "//third_party/eigen3",
     ],
 )
@@ -459,7 +459,7 @@ cc_library(
         ":circular_buffer",
         ":kiss_fft",
         ":number_util",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
         "@com_google_absl//absl/types:span",
         "//third_party/eigen3",
     ],
@@ -469,7 +469,7 @@ cc_library(
     name = "teager_energy_filter",
     hdrs = ["teager_energy_filter.h"],
     deps = [
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
         "@com_google_absl//absl/types:span",
     ],
 )
@@ -492,7 +492,7 @@ cc_library(
     deps = [
         ":porting",
         "//third_party/eigen3",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
         "@com_google_absl//absl/types:span",
         "@gtest//:gtest",
     ],
@@ -506,7 +506,7 @@ cc_test(
     deps = [
         ":porting",
         ":testing_util",
-        "@com_github_glog_glog//:glog",
+        "//third_party:glog",
         "@com_google_absl//absl/types:span",
         "@gtest//:gtest_main",
     ],

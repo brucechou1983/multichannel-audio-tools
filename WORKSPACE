@@ -65,6 +65,15 @@ http_archive(
     name = "com_github_glog_glog",
     strip_prefix = "glog-0a2e5931bd5ff22fd3bf8999eb8ce776f159cda6",
     sha256 = "58c9b3b6aaa4dd8b836c0fd8f65d0f941441fb95e27212c5eeb9979cfd3592ab",
+    urls = [
+        "https://github.com/google/glog/archive/0a2e5931bd5ff22fd3bf8999eb8ce776f159cda6.zip",
+    ],
+)
+
+http_archive(
+    name = "com_github_glog_glog_no_gflags",
+    strip_prefix = "glog-0a2e5931bd5ff22fd3bf8999eb8ce776f159cda6",
+    sha256 = "58c9b3b6aaa4dd8b836c0fd8f65d0f941441fb95e27212c5eeb9979cfd3592ab",
     build_file = "@//third_party:glog_no_gflags.BUILD",
     urls = [
         "https://github.com/google/glog/archive/0a2e5931bd5ff22fd3bf8999eb8ce776f159cda6.zip",
