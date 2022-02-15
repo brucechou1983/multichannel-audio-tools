@@ -61,10 +61,20 @@ git_repository(
 )
 
 # ===== glog =====
-git_repository(
+http_archive(
     name = "com_github_glog_glog",
-    remote = "https://github.com/google/glog.git",
-    tag = "v0.4.0",
+    strip_prefix = "glog-0a2e5931bd5ff22fd3bf8999eb8ce776f159cda6",
+    sha256 = "58c9b3b6aaa4dd8b836c0fd8f65d0f941441fb95e27212c5eeb9979cfd3592ab",
+    build_file = "@//third_party:glog_no_gflags.BUILD",
+    urls = [
+        "https://github.com/google/glog/archive/0a2e5931bd5ff22fd3bf8999eb8ce776f159cda6.zip",
+    ],
+    patches = [
+        "@//third_party:com_github_glog_glog_9779e5ea6ef59562b030248947f787d1256132ae.diff",
+    ],
+    patch_args = [
+        "-p1",
+    ],
 )
 
 # ===== protobuf ===== (Everything below here is required by protobuf)
